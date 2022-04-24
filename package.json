@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "npx tailwindcss -i ./stylesheets/main.css -o ./stylesheets/output.css",
+    "watch": "npx tailwindcss -i ./stylesheets/main.css -o ./stylesheets/output.css --watch",
+    "minifycss-for-production": "npx tailwindcss -o ./stylesheets/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "daisyui": "^2.14.2"
+  }
+}
