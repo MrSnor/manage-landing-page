@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./stylesheets/output.css">
   <style>
     body>* {
-      outline: 2px solid lime;
+      /* outline: 2px solid lime; */
     }
   </style>
   <title>Manage</title>
@@ -17,7 +17,7 @@
 <body class="py-8 px-4">
   <!-- Navbar -->
   <nav class=" du-navbar  mx-auto flex-col 
-  md:flex-row md:justify-between">
+  md:flex-row md:justify-between ">
 
     <!-- logo-and-menu Button -->
     <div id="logo-and-menuBtn" class="flex justify-between w-full 
@@ -52,7 +52,7 @@
 
   <main class="space-y-4">
     <!-- Hero section -->
-    <div id="hero" class="flex flex-col-reverse items-center md:flex-row">
+    <div id="hero" class="flex flex-col-reverse items-center justify-around  md:flex-row">
       <!-- hero text -->
       <div id="hero-intro" class="prose prose-headings:text-darkBlue prose-p:text-darkGrayishBlue
       flex flex-col items-center text-center
@@ -75,7 +75,7 @@
     </div>
 
     <!-- About section -->
-    <div id="about" class="flex flex-col md:flex-row">
+    <div id="about" class="flex flex-col justify-around items-center  md:flex-row">
 
       <div id="about-main" class="prose prose-headings:text-darkBlue prose-p:text-darkGrayishBlue text-center">
         <h1 class="font-bold">
@@ -92,8 +92,10 @@
         <ul class="list-none pl-0">
 
           <li>
-            <span class="list-number py-2 px-5 bg-brightRed rounded-full text-white select-none">01</span>
-            <span class="list-heading">Track company-wide progress</span>
+
+            <div class="list-heading bg-brightRedSupLight flex items-center gap-4 md:bg-transparent">
+              <span class="list-number -ml-3  py-2 px-5 bg-brightRed rounded-full text-white select-none">01</span>
+              Track company-wide progress</div>
             <p>
               See how your day-to-day tasks fit into the wider vision. Go from
               tracking progress at the milestone level all the way done to the
@@ -102,8 +104,10 @@
           </li>
 
           <li>
-            <span class="list-number py-2 px-5 bg-brightRed rounded-full text-white select-none">02</span>
-            <span class="list-heading">Advanced built-in reports</span>
+
+            <div class="list-heading bg-brightRedSupLight flex items-center gap-4 md:bg-transparent">
+              <span class="list-number -ml-3  py-2 px-5 bg-brightRed rounded-full text-white select-none">02</span>
+              Advanced built-in reports</div>
             <p>
               Set internal delivery estimates and track progress toward company
               goals. Our customisable dashboard helps you build out the reports
@@ -112,8 +116,10 @@
           </li>
 
           <li>
-            <span class="list-number py-2 px-5 bg-brightRed rounded-full text-white select-none">03</span>
-            <span class="list-heading">Everything you need in one place</span>
+
+            <div class="list-heading bg-brightRedSupLight flex items-center gap-4 md:bg-transparent">
+              <span class="list-number -ml-3  py-2 px-5 bg-brightRed rounded-full text-white select-none">03</span>
+              Everything you need in one place</div>
             <p>
               Stop jumping from one service to another to communicate, store files,
               track tasks and share documents. Manage offers an all-in-one team
