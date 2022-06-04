@@ -988,6 +988,76 @@ html {
   content: attr(data-title);
 }
 
+.du-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.du-card:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.du-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--padding-card, 2rem);
+  gap: 0.5rem;
+}
+
+.du-card-body :where(p) {
+  flex-grow: 1;
+}
+
+.du-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.du-card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.du-card.du-image-full {
+  display: grid;
+}
+
+.du-card.du-image-full:before {
+  position: relative;
+  content: "";
+  z-index: 10;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  opacity: 0.75;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.du-card.du-image-full:before, .du-card.du-image-full > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.du-card.du-image-full > figure img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.du-card.du-image-full > .du-card-body {
+  position: relative;
+  z-index: 20;
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+
 .du-menu {
   display: flex;
   flex-direction: column;
@@ -1072,6 +1142,41 @@ html {
   align-items: center;
 }
 
+.du-btn-outline.du-btn-primary .du-badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.du-btn-outline.du-btn-primary .du-badge-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.du-btn-outline.du-btn-primary:hover .du-badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.du-btn-outline.du-btn-primary:hover .du-badge.du-outline {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
 .du-btn:active:hover,
   .du-btn:active:focus {
   -webkit-animation: none;
@@ -1091,6 +1196,26 @@ html {
   outline-offset: 2px;
 }
 
+.du-btn-primary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--p) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.du-btn-primary:hover, .du-btn-primary.du-btn-active {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+}
+
+.du-btn-primary:focus-visible {
+  outline: 2px solid hsl(var(--p));
+}
+
 .du-btn.du-glass:hover,
     .du-btn.du-glass.du-btn-active {
   --glass-opacity: 25%;
@@ -1099,6 +1224,20 @@ html {
 
 .du-btn.du-glass:focus-visible {
   outline: 2px solid 0 0 2px currentColor;
+}
+
+.du-btn-outline.du-btn-primary {
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.du-btn-outline.du-btn-primary:hover {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
 .du-btn-disabled, .du-btn-disabled:hover, .du-btn[disabled], .du-btn[disabled]:hover {
@@ -1175,6 +1314,32 @@ html {
   }
 }
 
+.du-card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.du-card.du-bordered {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+}
+
+.du-card.du-compact .du-card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.du-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 @-webkit-keyframes checkmark {
   0% {
     background-position-y: 5px;
@@ -1201,6 +1366,10 @@ html {
   100% {
     background-position-y: 0;
   }
+}
+
+.du-drawer-toggle:focus-visible ~ .du-drawer-content .du-drawer-button.du-btn-primary {
+  outline: 2px solid hsl(var(--p));
 }
 
 .du-menu.du-horizontal li.du-bordered > a, .du-menu.du-horizontal li.du-bordered > button, .du-menu.du-horizontal li.du-bordered > span {
@@ -1439,12 +1608,36 @@ html {
   }
 }
 
+.du-card-compact .du-card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.du-card-compact .du-card-title {
+  margin-bottom: 0.25rem;
+}
+
+.du-card-normal .du-card-body {
+  padding: var(--padding-card, 2rem);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.du-card-normal .du-card-title {
+  margin-bottom: 0.75rem;
+}
+
 .absolute {
   position: absolute;
 }
 
 .top-20 {
   top: 5rem;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .mx-auto {
@@ -1454,6 +1647,10 @@ html {
 
 .-ml-3 {
   margin-left: -0.75rem;
+}
+
+.-mb-8 {
+  margin-bottom: -2rem;
 }
 
 .flex {
@@ -1470,6 +1667,14 @@ html {
 
 .w-\[85\%\] {
   width: 85%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .select-none {
@@ -1525,6 +1730,10 @@ html {
   border-radius: 9999px;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1538,6 +1747,16 @@ html {
 .bg-brightRedSupLight {
   --tw-bg-opacity: 1;
   background-color: hsl(12 88% 95% / var(--tw-bg-opacity));
+}
+
+.bg-base-100 {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .py-8 {
@@ -1581,8 +1800,26 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline {
   outline-style: solid;
+}
+
+#testimonials-carousel p {
+  --tw-text-opacity: 1;
+  color: hsl(227 12% 61% / var(--tw-text-opacity));
+}
+
+.splide__slide img {
+  width: 20%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .hover\:bg-brightRedLight:hover {

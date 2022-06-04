@@ -6,12 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./stylesheets/output.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
   <style>
     body>* {
       /* outline: 2px solid lime; */
     }
   </style>
   <title>Manage</title>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
 </head>
 
 <body class="py-8 px-4">
@@ -144,7 +147,82 @@
       </div>
 
     </div>
+
+    <!-- Testimonial Section -->
+    <!-- todo "splide" js carousal library working, gotta make it work with specified design  -->
+
+    <section id="testimonials-carousel" class="splide" aria-label="testimonials">
+      <div class="splide__track">
+        <ul class="splide__list text-center">
+          <li class="splide__slide">
+            <span class="du-card w-96 bg-base-100 shadow-xl">
+              <figure class="-mb-8 z-20">
+                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
+              </figure>
+              <div class="du-card-body items-center text-center bg-gray-200">
+                <h2 class="du-card-title">Anisha Li</h2>
+                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+                  visibility on larger milestones at all times keeps everyone motivated.”</p>
+              </div>
+            </span>
+          </li>
+          <li class="splide__slide">
+            <span class="du-card w-96 bg-base-100 shadow-xl">
+              <figure class="-mb-8 z-20">
+                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
+              </figure>
+              <div class="du-card-body items-center text-center bg-gray-200">
+                <h2 class="du-card-title">Anisha Li</h2>
+                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+                  visibility on larger milestones at all times keeps everyone motivated.”</p>
+              </div>
+            </span>
+          </li>
+          <li class="splide__slide">
+            <span class="du-card w-96 bg-base-100 shadow-xl">
+              <figure class="-mb-8 z-20">
+                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
+              </figure>
+              <div class="du-card-body items-center text-center bg-gray-200">
+                <h2 class="du-card-title">Anisha Li</h2>
+                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+                  visibility on larger milestones at all times keeps everyone motivated.”</p>
+              </div>
+            </span>
+          </li>
+          <li class="splide__slide">
+            <span class="du-card w-96 bg-base-100 shadow-xl">
+              <figure class="-mb-8 z-20">
+                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
+              </figure>
+              <div class="du-card-body items-center text-center bg-gray-200">
+                <h2 class="du-card-title">Anisha Li</h2>
+                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
+                  visibility on larger milestones at all times keeps everyone motivated.”</p>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 </body>
+<script>
+  // new Splide( '#image-carousel' ).mount();
+  console.log("somth")
+
+  new Splide( '#testimonials-carousel', {
+    autoScroll: {
+    speed: 1,
+  },
+    type: 'loop',
+    arrows: false,
+		perPage    : 3,
+    // gap: '1rem',
+		breakpoints: {
+			640: { perPage: 1 },
+		},
+  } ).mount();
+</script>
 
 </html>

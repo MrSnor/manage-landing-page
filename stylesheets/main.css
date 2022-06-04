@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#testimonials-carousel p{
+  @apply text-darkGrayishBlue
+}
+
+.splide__slide img {
+  width: 20%;
+  height: auto;
+  @apply mx-auto
+}
