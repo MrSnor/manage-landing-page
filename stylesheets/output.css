@@ -1013,13 +1013,6 @@ html {
   flex-grow: 1;
 }
 
-.du-card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
 .du-card figure {
   display: flex;
   align-items: center;
@@ -1142,41 +1135,6 @@ html {
   align-items: center;
 }
 
-.du-btn-outline.du-btn-primary .du-badge {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
-.du-btn-outline.du-btn-primary .du-badge-outline {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  background-color: transparent;
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-
-.du-btn-outline.du-btn-primary:hover .du-badge {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pc) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pc) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-
-.du-btn-outline.du-btn-primary:hover .du-badge.du-outline {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pc) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
 .du-btn:active:hover,
   .du-btn:active:focus {
   -webkit-animation: none;
@@ -1196,26 +1154,6 @@ html {
   outline-offset: 2px;
 }
 
-.du-btn-primary {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--p) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
-}
-
-.du-btn-primary:hover, .du-btn-primary.du-btn-active {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-}
-
-.du-btn-primary:focus-visible {
-  outline: 2px solid hsl(var(--p));
-}
-
 .du-btn.du-glass:hover,
     .du-btn.du-glass.du-btn-active {
   --glass-opacity: 25%;
@@ -1224,20 +1162,6 @@ html {
 
 .du-btn.du-glass:focus-visible {
   outline: 2px solid 0 0 2px currentColor;
-}
-
-.du-btn-outline.du-btn-primary {
-  --tw-text-opacity: 1;
-  color: hsl(var(--p) / var(--tw-text-opacity));
-}
-
-.du-btn-outline.du-btn-primary:hover {
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--pf, var(--p)) / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--pf, var(--p)) / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
 .du-btn-disabled, .du-btn-disabled:hover, .du-btn[disabled], .du-btn[disabled]:hover {
@@ -1366,10 +1290,6 @@ html {
   100% {
     background-position-y: 0;
   }
-}
-
-.du-drawer-toggle:focus-visible ~ .du-drawer-content .du-drawer-button.du-btn-primary {
-  outline: 2px solid hsl(var(--p));
 }
 
 .du-menu.du-horizontal li.du-bordered > a, .du-menu.du-horizontal li.du-bordered > button, .du-menu.du-horizontal li.du-bordered > span {
@@ -1673,10 +1593,6 @@ html {
   width: 24rem;
 }
 
-.w-1\/3 {
-  width: 33.333333%;
-}
-
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1698,6 +1614,10 @@ html {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -1754,9 +1674,9 @@ html {
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
+.bg-gray-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .py-8 {
@@ -1779,12 +1699,22 @@ html {
   padding-right: 1.25rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pl-0 {
   padding-left: 0px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -1800,6 +1730,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-darkBlue {
+  --tw-text-opacity: 1;
+  color: hsl(228 39% 23% / var(--tw-text-opacity));
+}
+
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1810,7 +1745,17 @@ html {
   outline-style: solid;
 }
 
-#testimonials-carousel p {
+.testimonials-carousel .splide__slide {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-carousel h2 {
+  --tw-text-opacity: 1;
+  color: hsl(228 39% 23% / var(--tw-text-opacity));
+}
+
+.testimonials-carousel p {
   --tw-text-opacity: 1;
   color: hsl(227 12% 61% / var(--tw-text-opacity));
 }
@@ -1820,6 +1765,10 @@ html {
   height: auto;
   margin-left: auto;
   margin-right: auto
+}
+
+.splide__pagination {
+  position: static;
 }
 
 .hover\:bg-brightRedLight:hover {
@@ -1879,5 +1828,10 @@ html {
 @media (min-width: 976px) {
   .lg\:inline-flex {
     display: inline-flex;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

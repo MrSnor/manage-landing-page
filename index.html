@@ -11,6 +11,12 @@
     body>* {
       /* outline: 2px solid lime; */
     }
+
+    /* style for splide */
+    .splide__pagination {
+      position: static;
+    }
+
   </style>
   <title>Manage</title>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
@@ -68,7 +74,7 @@
 
   <main class="space-y-4">
     <!-- Hero section -->
-    <div id="hero" class="flex flex-col-reverse items-center justify-around  md:flex-row">
+    <section id="hero" class="flex flex-col-reverse items-center justify-around  md:flex-row">
       <!-- hero text -->
       <div id="hero-intro" class="prose prose-headings:text-darkBlue prose-p:text-darkGrayishBlue
       flex flex-col items-center text-center
@@ -88,10 +94,10 @@
       <div id="hero-banner-image">
         <img src="./images/illustration-intro.svg" alt="intro-image">
       </div>
-    </div>
+    </section>
 
     <!-- About section -->
-    <div id="about" class="flex flex-col justify-around items-center  md:flex-row">
+    <section id="about" class="flex flex-col justify-around items-center  md:flex-row">
 
       <div id="about-main" class="prose prose-headings:text-darkBlue prose-p:text-darkGrayishBlue text-center">
         <h1 class="font-bold">
@@ -146,83 +152,111 @@
         </ul>
       </div>
 
-    </div>
+    </section>
 
     <!-- Testimonial Section -->
     <!-- todo "splide" js carousal library working, gotta make it work with specified design  -->
 
-    <section id="testimonials-carousel" class="splide" aria-label="testimonials">
-      <div class="splide__track">
-        <ul class="splide__list text-center">
-          <li class="splide__slide">
-            <span class="du-card w-96 bg-base-100 shadow-xl">
-              <figure class="-mb-8 z-20">
-                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
-              </figure>
-              <div class="du-card-body items-center text-center bg-gray-200">
-                <h2 class="du-card-title">Anisha Li</h2>
-                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
-                  visibility on larger milestones at all times keeps everyone motivated.”</p>
-              </div>
-            </span>
-          </li>
-          <li class="splide__slide">
-            <span class="du-card w-96 bg-base-100 shadow-xl">
-              <figure class="-mb-8 z-20">
-                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
-              </figure>
-              <div class="du-card-body items-center text-center bg-gray-200">
-                <h2 class="du-card-title">Anisha Li</h2>
-                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
-                  visibility on larger milestones at all times keeps everyone motivated.”</p>
-              </div>
-            </span>
-          </li>
-          <li class="splide__slide">
-            <span class="du-card w-96 bg-base-100 shadow-xl">
-              <figure class="-mb-8 z-20">
-                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
-              </figure>
-              <div class="du-card-body items-center text-center bg-gray-200">
-                <h2 class="du-card-title">Anisha Li</h2>
-                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
-                  visibility on larger milestones at all times keeps everyone motivated.”</p>
-              </div>
-            </span>
-          </li>
-          <li class="splide__slide">
-            <span class="du-card w-96 bg-base-100 shadow-xl">
-              <figure class="-mb-8 z-20">
-                <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
-              </figure>
-              <div class="du-card-body items-center text-center bg-gray-200">
-                <h2 class="du-card-title">Anisha Li</h2>
-                <p>“Manage has supercharged our team’s workflow. The ability to maintain 
-                  visibility on larger milestones at all times keeps everyone motivated.”</p>
-              </div>
-            </span>
-          </li>
-        </ul>
+    <section class="testimonial-section">
+      <div class="flex py-4 text-3xl lg:text-4xl font-bold text-darkBlue">
+        <h1 class="mx-auto">What they’ve said</h1>
       </div>
+      <div class="carousal-container">
+        <div class="testimonials-carousel splide" aria-label="testimonials">
+          <div class="splide__track">
+            <ul class="splide__list text-center">
+              <!-- first card -->
+              <li class="splide__slide">
+                <span class="du-card w-96 bg-base-100 shadow-xl">
+                  <figure class="-mb-8 z-20">
+                    <img src="./images/avatar-anisha.png" alt="avatar-anisha" class="rounded-xl" />
+                  </figure>
+                  <div class="du-card-body items-center text-center bg-gray-100">
+                    <h2 class="du-card-title">Anisha Li</h2>
+                    <p>“Manage has supercharged our team’s workflow. The ability to maintain
+                      visibility on larger milestones at all times keeps everyone motivated.”</p>
+                  </div>
+                </span>
+              </li>
+              <!-- second card -->
+              <li class="splide__slide">
+                <span class="du-card w-96 bg-base-100 shadow-xl">
+                  <figure class="-mb-8 z-20">
+                    <img src="./images/avatar-ali.png" alt="avatar-anisha" class="rounded-xl" />
+                  </figure>
+                  <div class="du-card-body items-center text-center bg-gray-100">
+                    <h2 class="du-card-title">Ali Bravo</h2>
+                    <p>“We have been able to cancel so many other subscriptions since using
+                      Manage. There is no more cross-channel confusion and everyone is much
+                      more focused.”</p>
+                  </div>
+                </span>
+              </li>
+              <!-- third card -->
+              <li class="splide__slide">
+                <span class="du-card w-96 bg-base-100 shadow-xl">
+                  <figure class="-mb-8 z-20">
+                    <img src="./images/avatar-richard.png" alt="avatar-anisha" class="rounded-xl" />
+                  </figure>
+                  <div class="du-card-body items-center text-center bg-gray-100">
+                    <h2 class="du-card-title">Richard Watts</h2>
+                    <p>“Manage allows us to provide structure and process. It keeps us organized
+                      and focused. I can’t stop recommending them to everyone I talk to!”</p>
+                  </div>
+                </span>
+              </li>
+              <!-- fourth card -->
+              <li class="splide__slide">
+                <span class="du-card w-96 bg-base-100 shadow-xl">
+                  <figure class="-mb-8 z-20">
+                    <img src="./images/avatar-shanai.png" alt="avatar-anisha" class="rounded-xl" />
+                  </figure>
+                  <div class="du-card-body items-center text-center bg-gray-100">
+                    <h2 class="du-card-title">Shanai Gough</h2>
+                    <p>“Their software allows us to track, manage and collaborate on our projects
+                      from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+                  </div>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <ul class="splide__pagination"></ul>
+        </div>
+      </div>
+
+      <div class="flex justify-center py-4">
+        <a href="#" class="du-btn rounded-full bg-brightRed hover:bg-brightRedLight
+        text-white normal-case "> Get Started</a>
+      </div>
+      
     </section>
+    
   </main>
 </body>
 <script>
-  // new Splide( '#image-carousel' ).mount();
-  console.log("somth")
 
-  new Splide( '#testimonials-carousel', {
-    autoScroll: {
+  new Splide( '.testimonials-carousel', {
+  autoScroll: {
     speed: 1,
+    // this rewind is for autoScroll specifically
+    rewind: true,
   },
-    type: 'loop',
-    arrows: false,
-		perPage    : 3,
-    // gap: '1rem',
-		breakpoints: {
-			640: { perPage: 1 },
-		},
-  } ).mount();
+  // this rewind is for the splide as element as a whole
+  // (works only with arrows but not with drag)
+  rewind: true,
+  // to loop the carousel after it reaches the end
+  // type: 'loop',
+  pagination: false,
+  drag: true,
+  arrows: false,
+  perPage : 3,
+  gap: '2rem',
+  breakpoints: {
+    1230: { perPage: 2 },
+    640: { perPage: 1, pagination: true }
+  },
+  } ).mount( window.splide.Extensions );
+  
 </script>
 
 </html>
