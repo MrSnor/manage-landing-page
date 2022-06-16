@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="./stylesheets/output.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
   <style>
-    body>* {
-      /* outline: 2px solid lime; */
-    }
+    /* body * {
+      outline: 2px solid lime;
+    } */
 
     /* style for splide */
     /* needs to be after style sheet of "spilde" */
@@ -18,6 +18,15 @@
       position: static;
     }
 
+    .splide__pagination__page {
+      border: 1px solid hsl(12, 88%, 59%);
+      background-color: white;
+    }
+
+    .splide__pagination__page.is-active {
+      background-color: hsla(12, 88%, 59%);
+    }
+    
   </style>
   <title>Manage</title>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
