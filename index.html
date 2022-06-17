@@ -29,13 +29,16 @@
     
   </style>
   <title>Manage</title>
+  
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.4.2/dist/js/splide-extension-auto-scroll.min.js"></script>
+  <script src="./js/toogleMenu.js" defer ></script>
+  
 </head>
 
 <body class="">
   <!-- Navbar -->
-  <nav class=" du-navbar  mx-auto flex-col px-4
+  <nav class="du-navbar justify-center flex-col px-4
   md:flex-row md:justify-between ">
 
     <!-- logo-and-menu Button -->
@@ -47,24 +50,28 @@
       </div>
 
       <div id="menu-toggle-btn" class="md:hidden">
-        <!-- temp menu icon -->
-        <!-- todo -> to be changed -->
-        <img src="./images/icon-hamburger.svg" alt="">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <span class="sr-only" aria-expanded="false">Menu</span>
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </button>
       </div>
     </div>
 
     <!-- Menu -->
 
     <!-- Smaller screen menu -->
-    <ul id="mobile-nav-menu" class="du-menu font-bold bg-white absolute top-20 rounded-md w-[85%]
+    <ul class="mobile-nav-menu du-menu font-bold bg-white top-20 rounded-md w-[85%]
     md:hidden">
       <!-- Menu Items -->
-      <li class=""><a href="#">Pricing</a></li>
-      <li class=""><a href="#">Product</a></li>
-      <li class=""><a href="#">About Us</a></li>
-      <li class=""><a href="#">Careers</a></li>
-      <li class=""><a href="#">Community</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Community</a></li>
     </ul>
+    <div class="mobile-nav-menu-overlay"></div>
 
     <!-- Larger screen menu -->
     <ul id="nav-menu" class="du-menu w-full items-center font-bold hidden whitespace-nowrap

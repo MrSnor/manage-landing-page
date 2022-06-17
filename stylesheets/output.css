@@ -1548,8 +1548,16 @@ html {
   margin-bottom: 0.75rem;
 }
 
-.absolute {
+.sr-only {
   position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .top-20 {
@@ -1759,10 +1767,91 @@ html {
   outline-style: solid;
 }
 
+/* mobile navigation menu */
+
+.mobile-nav-menu {
+  position: fixed;
+  z-index: 1000;
+  transition: transform 700ms ease-in-out;
+  transform: translateY(-150%);
+}
+
+.mobile-nav-menu[data-visible="true"] {
+  transform: translateY(0%);
+}
+
+/* give full width to links inside list-items of menu */
+
+.mobile-nav-menu>* {
+  width: 100%;
+}
+
+.mobile-nav-menu>*>* {
+  width: 100%;
+  justify-content: center;
+}
+
+.mobile-nav-menu-overlay {
+  transform: translateY(100%);
+  position: fixed;
+  inset: 0;
+  transition: transform 400ms ease-in-out;
+  background-color: hsl(230 35% 7% / 0.45);
+  z-index: 800;
+  display: block;
+}
+
+.mobile-nav-menu[data-visible="true"]~.mobile-nav-menu-overlay {
+  transform: translateY(0%);
+}
+
+.mobile-nav-toggle {
+  position: absolute;
+  z-index: 2000;
+  right: 1rem;
+  top: 1rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.mobile-nav-toggle div {
+  width: 35px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* animation of menu button toggle */
+
+.mobile-nav-toggle[aria-expanded="true"] .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .bar2 {
+  opacity: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* "focus-visible" activates when 
+selected using keyboard(after pressing tab) */
+
+.mobile-nav-toggle:focus-visible {
+  outline: 5px solid white;
+  outline-offset: 5px;
+}
+
+/* get started button  */
+
 .landing-orange-getStarted {
   border-width: 0;
   box-shadow: 0px 10px 15px -3px hsl(12, 88%, 69%);
 }
+
+/* style for splide */
 
 .testimonials-carousel .splide__slide {
   display: flex;
