@@ -27,13 +27,24 @@
 }
 
 .mobile-nav-menu-overlay {
-  transform: translateY(100%);
+  transform: translateY(150%);
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  left: 0;
   transition: transform 400ms ease-in-out;
   background-color: hsl(230 35% 7% / 0.45);
   z-index: 800;
   display: block;
+  height: 100vh;
+}
+
+@supports (backdrop-filter: blur(25px) saturate(150%)) {
+  .mobile-nav-menu-overlay {
+    background-color: hsl(var(--clr-white) / .05);
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(73%);
+  }
 }
 
 .mobile-nav-menu[data-visible="true"]~.mobile-nav-menu-overlay {
