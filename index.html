@@ -36,7 +36,7 @@
   
 </head>
 
-<body class="">
+<body>
   <!-- Navbar -->
   <nav class="du-navbar justify-center flex-col px-4
   md:flex-row md:justify-between ">
@@ -266,18 +266,25 @@
   </main>
 
   <footer>
-    <div class="flex flex-col justify-center items-center gap-10 py-8 bg-veryDarkBlue ">
-    
+    <div
+      class="flex flex-col justify-center items-center md:flex-row-reverse gap-10 py-8 bg-veryDarkBlue md:gap-4 lg:justify-around">
+  
       <!-- newsletter email input -->
-      <div>
+      <div class="space-y-12">
         <div>
           <form action="" method="post" class="flex gap-4 flex-wrap">
-            <input type="email" name="news-letter-mail" id="" placeholder="Updates in your inbox…" class="rounded-full h-12 py-5 px-4" required>
-            <button type="submit" class="du-btn bg-brightRed hover:bg-brightRedLight text-white border-0 rounded-full px-8">Go</button>
+            <input type="email" name="news-letter-mail" id="" placeholder="Updates in your inbox…"
+              class="rounded-full h-12 py-5 px-4" required>
+            <button type="submit"
+              class="du-btn bg-brightRed hover:bg-brightRedLight text-white border-0 rounded-full px-8">Go</button>
           </form>
         </div>
+  
+        <div class="text-gray-500 lg:text-right hidden md:block">
+          <span>Copyright 2022. All Rights Reserved</span>
+        </div>
       </div>
-
+  
       <!-- nav links -->
       <div class="flex gap-32 text-white px-3">
         <ul class="space-y-4">
@@ -292,10 +299,10 @@
           <li><a class="du-link-hover" href="#">Privacy Policy</a></li>
         </ul>
       </div>
-      
+  
       <!-- social icons -->
-      <div>
-        <ul class="flex gap-7 prose prose-li:m-0 prose-img:h-8">
+      <div class="flex gap-y-8 flex-col md:flex-col-reverse">
+        <ul class="flex flex-wrap justify-center gap-7 prose prose-li:m-0 prose-img:h-8 md:prose-img:h-6 md:gap-2">
           <li class="icons">
             <a href="#"><img src="./images/icon-facebook.svg" alt=""></a>
           </li>
@@ -312,19 +319,21 @@
             <a href="#"><img src="./images/icon-instagram.svg" alt=""></a>
           </li>
         </ul>
+  
+        <!-- logo -->
         <div class="logo flex justify-center">
           <a href="#"><img src="./images/logo-white-text.svg" alt=""></a>
         </div>
       </div>
-
+  
       <!-- copyright text (for smaller devices) -->
       <div class="text-gray-500 md:hidden">
         <span>Copyright 2022. All Rights Reserved</span>
       </div>
-    
+  
     </div>
-
-</footer>
+  
+  </footer>
 
 
 </body>
