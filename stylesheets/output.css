@@ -1857,6 +1857,39 @@ html {
   outline-style: solid;
 }
 
+/* body */
+
+body {
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 500px;
+}
+
+/* cta section */
+
+#cta>div>div {
+  background-image: url('../images/bg-simplify-section-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+@media (min-width: 768px) {
+  /* body */
+
+  body {
+    background-position: right -20%;
+    background-size: 700px;
+  }
+
+  /* cta section */
+
+  #cta>div>div {
+    background-image: url('../images/bg-simplify-section-desktop.svg');
+    background-position: center center;
+  }
+}
+
 /* mobile navigation menu */
 
 .mobile-nav-menu {
